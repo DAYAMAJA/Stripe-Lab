@@ -191,15 +191,9 @@ const boton=document.getElementById("checkoutBtn");
 
 const status=document.getElementById("status");
 
-boton.addEventListener("click",function(){
+boton.addEventListener("click", function () {
 
-    status.innerHTML="⏳ Preparando Stripe Checkout...";
-
-    setTimeout(function(){
-
-        status.innerHTML="✅ Interfaz funcionando correctamente.<br><br>En el siguiente paso este botón abrirá Stripe Checkout.";
-
-    },1500);
+    window.location.href = "https://buy.stripe.com/5kQ7sM2jC14NejX9Sc2B200";
 
 });
 
