@@ -1,183 +1,113 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
 <title>Pago Exitoso</title>
-
+  
 <style>
-
 *{
 margin:0;
 padding:0;
 box-sizing:border-box;
 font-family:Arial,Helvetica,sans-serif;
 }
-
+  
 body{
-
 background:linear-gradient(135deg,#635BFF,#3b82f6);
-
 display:flex;
-
 justify-content:center;
-
 align-items:center;
-
 min-height:100vh;
-
 }
-
+  
 .card{
-
 background:white;
-
 width:420px;
-
 padding:40px;
-
 border-radius:20px;
-
 text-align:center;
-
 box-shadow:0 20px 40px rgba(0,0,0,.3);
-
 }
-
+  
 h1{
-
 color:#22c55e;
-
 margin-bottom:20px;
-
 }
-
 p{
-
 margin:15px 0;
-
 font-size:18px;
-
 color:#444;
-
 }
-
+  
 .codigo{
-
 margin:25px 0;
-
 padding:18px;
-
 background:#f2f2f2;
-
 border-radius:10px;
-
 font-size:30px;
-
 font-weight:bold;
-
 letter-spacing:3px;
-
 color:#635BFF;
-
 }
-
+  
 button{
-
 width:100%;
-
 padding:16px;
-
 margin-top:15px;
-
 border:none;
-
 border-radius:10px;
-
 cursor:pointer;
-
 font-size:18px;
-
 background:#635BFF;
-
 color:white;
-
 transition:.3s;
-
 }
-
+  
 button:hover{
-
 background:#4f46e5;
-
 }
-
+  
 a{
-
 text-decoration:none;
-
 }
-
+  
 </style>
-
 </head>
-
+  
 <body>
-
 <div class="card">
-
 <h1>🎉 ¡Pago Exitoso!</h1>
-
 <p>
-
 Gracias por comprar Mastery English Premium.
-
 </p>
-
 <p>
-
 Tu llave Premium es:
-
 </p>
-
 <div class="codigo" id="clave">
-
 552455
-
 </div>
-
+  
 <button onclick="copiarClave()">
-
 📋 Copiar llave
-
 </button>
-
+  
 <a href="https://dayamaja.github.io/Mastery/">
-
+  
 <button>
-
 🚀 Ir al Portal Premium
-
 </button>
-
+  
 </a>
-
 </div>
-
+  
 <script>
-
 function copiarClave(){
-
 navigator.clipboard.writeText("552455");
-
 alert("La llave se copió al portapapeles.");
-
 }
-
 </script>
-
+  
 </body>
-
+  
 </html>
