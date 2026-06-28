@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Stripe Lab</title>
+
+    <style>
+
+        *{
+            margin:0;
+            padding:0;
+            box-sizing:border-box;
+        }
+
+        body{
+
+            font-family:Arial, Helvetica, sans-serif;
+
+            background:linear-gradient(135deg,#635BFF,#3b82f6);
+
+            display:flex;
+
+            justify-content:center;
+
+            align-items:center;
+
+            min-height:100vh;
+
+        }
+
+        .container{
+
+            width:420px;
+
+            background:white;
+
+            padding:35px;
+
+            border-radius:18px;
+
+            box-shadow:0 20px 40px rgba(0,0,0,.25);
+
+            text-align:center;
+
+        }
+
+        h1{
+
+            color:#635BFF;
+
+            margin-bottom:15px;
+
+        }
+
+        p{
+
+            color:#555;
+
+            line-height:1.6;
+
+        }
+
+        .card{
+
+            margin-top:25px;
+
+            padding:25px;
+
+            border:2px solid #ececec;
+
+            border-radius:15px;
+
+        }
+
+        .card h2{
+
+            color:#222;
+
+            margin-bottom:15px;
+
+        }
+
+        button{
+
+            margin-top:20px;
+
+            width:100%;
+
+            padding:16px;
+
+            border:none;
+
+            border-radius:10px;
+
+            background:#635BFF;
+
+            color:white;
+
+            font-size:18px;
+
+            cursor:pointer;
+
+            transition:.3s;
+
+        }
+
+        button:hover{
+
+            background:#4f46e5;
+
+            transform:scale(1.03);
+
+        }
+
+        #status{
+
+            margin-top:25px;
+
+            padding:15px;
+
+            background:#f5f5f5;
+
+            border-radius:10px;
+
+            font-weight:bold;
+
+            color:#444;
+
+        }
+
+        .footer{
+
+            margin-top:25px;
+
+            font-size:13px;
+
+            color:#888;
+
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+<div class="container">
+
+    <h1>🚀 Stripe Lab</h1>
+
+    <p>
+        Laboratorio de pruebas para integrar Stripe Checkout
+        con <strong>Mastery English</strong>.
+    </p>
+
+    <div class="card">
+
+        <h2>💎 Mastery English Premium</h2>
+
+        <p>
+            Esta compra es únicamente una prueba del laboratorio.
+        </p>
+
+        <button id="checkoutBtn">
+            Comprar acceso Premium
+        </button>
+
+    </div>
+
+    <div id="status">
+
+        Esperando acción...
+
+    </div>
+
+    <div class="footer">
+
+        Bitácora 006.2 - Stripe Lab
+
+    </div>
+
+</div>
+
+<script>
+
+const boton=document.getElementById("checkoutBtn");
+
+const status=document.getElementById("status");
+
+boton.addEventListener("click",function(){
+
+    status.innerHTML="⏳ Preparando Stripe Checkout...";
+
+    setTimeout(function(){
+
+        status.innerHTML="✅ Interfaz funcionando correctamente.<br><br>En el siguiente paso este botón abrirá Stripe Checkout.";
+
+    },1500);
+
+});
+
+</script>
+
+</body>
+
+</html>
